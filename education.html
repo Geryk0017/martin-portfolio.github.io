@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Education </title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '#23395D',
+                    secondary: 'white',
+                    tertiary: '#05C3DD',
+                }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-[Poppins] bg-primary pb-10">
+
+    <header class="md:text-secondary">
+        <div class="flex justify-start absolute p-5 gap-6 text-2xl">
+            <h1> <span class="text-tertiary">Martin</span> <span class="text-secondary">.</span> </h1>
+        </div>
+        <nav class="flex justify-end p-5 text-xl ">
+            <div class="nav-links p-10 leading-10 min-h-fit left-0 top-[-100%] w-full px-5
+                md:bg-primary bg-secondary md:static absolute  md:w-auto ">
+                <ul class="flex 
+                md:flex-row flex-col items-center md:items-center md:gap-[4vw] gap-12">
+                
+                    <li>
+                        <a class="hover:text-tertiary" href="index.html"> Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-tertiary" href="education.html"> Education</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-tertiary" href="skills.html"> My Skills</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-tertiary" href="contact.html"> Contact</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-4xl text-white cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="text-2xl text-center text-secondary py-5"> Education </h1> <br><br>
+
+    <div class="elementary">
+        <div class="border-l-4 border-tertiary h-full py-5 mx-10 text-secondary">
+            <div class="px-5">
+                <p class="px-5 font-bold"> Elementary </p> <br>
+                <p class="px-5"> Manggahan Elementary School </p> <br>
+                <p class="px-5"> 2009-2014 </p>
+            </div>
+    
+            </div>
+    </div> <br><br><br>
+
+    <div class="highschool">
+        <div class="border-l-4 border-tertiary h-full py-5 mx-10 text-secondary">
+            <div class="px-5">
+                <p class="px-5 font-bold"> High School </p> <br>
+                <p class="px-5"> Manggahan High School </p> <br>
+                <p class="px-5"> 2014-2018 </p>
+            </div>
+    
+            </div>
+    </div><br><br><br>
+
+    <div class="shs">
+        <div class="border-l-4 border-tertiary h-full py-5 mx-10 text-secondary">
+            <div class="px-5">
+                <p class="px-5 font-bold"> Senior High School </p> <br>
+                <p class="px-5"> STI College Cubao </p> <br>
+                <p class="px-5"> 2018-2020 </p>
+            </div>
+    
+            </div>
+    </div><br><br><br>
+
+    <div class="shs">
+        <div class="border-l-4 border-tertiary h-full py-5 mx-10 text-secondary">
+            <div class="px-5">
+                <p class="px-5 font-bold"> College </p> <br>
+                <p class="px-5"> Rizal Technological University </p> <br>
+                <p class="px-5"> 2021-Current </p>
+            </div>
+    
+            </div>
+    </div>
+
+
+
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[9%]')
+
+    }
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName('mySlides');
+    var dot = document.getElementsByClassName('dot');
+    
+    if (n > slides.length) {
+        slideIndeex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i=0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    for (i = 0; i < dot.length; i++) {
+        dot[i].className = dot[i].className.replace('active', '');
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    dot[slideIndex - 1].className += 'active';
+
+    
+    
+}
+</script>
+    
+</body>
+</html>
